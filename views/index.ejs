@@ -3,8 +3,28 @@
 <div class="content">
 	<h1 style="margin-bottom: 0px;">&nbsp;Blog Site</h1>
 	<div class="bordering">
-		<div class="small-container">
-			first blog
-		</div>
+		<% blogs.forEach(function(blog){ %>
+
+			<div class="small-container">
+				<img src="<%= blog.image %>">
+				<h3> <%= blog.name %> </h3>
+				<p class="date"> <%= blog.date%> </p>
+				<p class="blog-content"> 
+					<% for(var counter = 0; counter < 50; counter++){ %>
+						<%= blog.content[counter] %> 
+					<% } %> 
+				</p>
+			</div>
+
+			<button>
+				<a href="/blogs/<%= blog._id %>" style="color:purple;">
+					Read More <span class="fa fa-arrow button"></span>		
+				</a>
+			</button>
+
+			<hr>
+		<% }); %>		
 	</div>
 </div>
+
+<% include partials/footer %>

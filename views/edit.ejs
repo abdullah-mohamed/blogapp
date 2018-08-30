@@ -1,0 +1,28 @@
+<% include partials/header %>
+
+<div class="content">
+	<div class="bordering">
+		<div class= "small-container">
+			<form action='/blogs/<%= post._id %>' method='POST'>
+				<h3 style="margin-bottom: 15px; margin-top: 0px; font-size: 30px;">Edit Post</h3>
+
+				<strong><label>Title</label></strong><br>
+				<input type="text" name="blogTitle" style="margin-bottom: 10px; width:100%; height: 22px;"></input><br>
+
+				<strong><label>Post Content</label></strong><br>
+				<input type="text" name="blogContent" style="margin-bottom: 10px; width:100%; height: 110px;"></input><br>
+
+				<input type="submit" style="color: purple; font-size:18px; background-color: white; border: 1px solid purple; height: 50px; width: 150px; border-radius: 5px; margin-bottom: 10px;">
+			</form>
+		</div>
+	</div>
+</div>
+
+<script>
+	var inputs = document.querySelectorAll('input');
+	//inputs[0].value.set(<%= post.name %>);
+	//inputs[1].value = <%= post.content %>;
+</script>
+
+
+<% include partials/footer %>
