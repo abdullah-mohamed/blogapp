@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+<div class="ui container">
+	<div style="margin: 45px 185px;">
+		<h1 style="margin-bottom: 0px;">&nbsp;Blog Site</h1>
+		<div class="ui segment" style="margin-top: 0px;">
+			<% blogs.forEach(function(blog){ %>
+				<div class="ui grid">
+					<div class="row">
+						<div class="six wide column">
+							<img src="<%= blog.image %>">
+						</div>
+						<div class="ten wide column">
+							<h3 style="margin-bottom: 0px;"> <%= blog.name %> </h3>
+							<p class="date"> <%= blog.date%> </p>
+							<p class="blog-content"> 
+								<% for(var counter = 0; counter < 50; counter++){ %>
+									<%= blog.content[counter] %> 
+								<% } %> 
+							</p>
+							<button class="ui violet basic button big">
+								<a href="/blogs/<%= blog._id %>" style="font-size: 20px; color: purple;">
+									Read More <i class="fas fa-angle-right"></i>		
+								</a>
+							</button>
+						</div>
+					</div>
+					<hr class="ui divider">
+				</div>
+			<% }); %>
+			</div>		
+		</div>
+	</div>
+</div>
+
+<% include partials/footer %>

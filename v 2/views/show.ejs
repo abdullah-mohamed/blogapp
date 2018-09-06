@@ -1,0 +1,20 @@
+<% include partials/header %>
+
+<div class="ui container">
+	<div style="margin: 45px 185px;">
+		<h3 style="margin-top: 30px; font-size: 25px;"> <%= post.name %> </h3>
+		<div class="ui segment">
+			<div class= "small-container">
+				<img src="<%= post.image %>" style="float: none; width: 100%; height: 300px;">
+				<strong><p style="margin: 0px;"> <%= post.date %> </p></strong>
+				<p style="margin-top: 0px;"> <%= post.content %> </p>
+				<button class="ui button big basic orange"><a href="/blogs/<%= post._id %>/edit" style="color: orange;">Update Blog</a></button>
+				<form action="/blogs/<%= post._id %>?_method=DELETE" method="POST">
+					<button class="ui button big basic red"><a href="/blogs/<%= post._id %>" style="color:red;" >Delete Blog</a></button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include partials/footer %>

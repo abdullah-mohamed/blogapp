@@ -1,0 +1,29 @@
+{
+  "name": "29_blog_app",
+  "version": "1.0.0",
+  "description": "A simple blog app that follows RESTFUL routing convention",
+  "main": "app.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullah-mohamed/blogapp.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "abdullah mohamed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdullah-mohamed/blogapp/issues"
+  },
+  "homepage": "https://github.com/abdullah-mohamed/blogapp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.10",
+    "semantic-ui": "^2.3.3"
+  }
+}

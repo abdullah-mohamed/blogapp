@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<div class="ui container">
+	<div style="margin: 45px 185px;">
+		<div class="ui segment">
+			<div class="small-container">
+				<form action='/blogs' method="POST">
+					<h2 style="margin-top: 0px; margin-bottom: 15px; font-size: 35px;">New Post</h2>
+
+					<strong><label>Title</label></strong><br>
+					<div class="ui fluid icon input"><input type="text" name="title" ></input></div><br>
+
+					<strong><label>Image</label></strong><br>
+					<div class="ui fluid icon input"><input type="text" name="image" ></input></div><br>
+
+					<strong><label>Post Content</strong></label><br>
+					<div class="ui fluid icon input"><input type="text" name="content" style="height: 110px;"></input></div><br>
+					
+					<button class="ui basic button violet big"><a style="color: purple;">Create Post</a></button>
+				</form>
+			</div>
+		</div>
+</div>
+
+<% include partials/footer %>
